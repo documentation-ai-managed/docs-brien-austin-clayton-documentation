@@ -1,0 +1,126 @@
+---
+title: Getting Started
+description: A step-by-step guide to set up your documentation space and create your first project.
+---
+
+## Quick Start
+
+Set up your Brien Austin Clayton Documentation space in minutes. Follow these steps to create an account, configure your space, build your first project, and navigate the interface. You gain full control over organizing project docs with custom themes and collaboration tools.
+
+<Columns cols={3}>
+  <Card title="Create Account" icon="user-plus" href="#create-account">
+    Sign up and verify your email.
+  </Card>
+  <Card title="Setup Space" icon="settings" href="#setup-space">
+    Customize your documentation hub.
+  </Card>
+  <Card title="First Project" icon="plus" href="#first-project">
+    Launch your initial docs project.
+  </Card>
+</Columns>
+
+## Step-by-Step Setup
+
+Use these numbered steps to get running quickly. Each includes platform-specific options where relevant.
+
+<Steps>
+  <Step title="Create Account and Login" icon="user">
+    Visit the signup page at `https://docs.brienaustinclayton.com/signup`.
+
+    Choose your authentication method.
+
+    <Tabs>
+      <Tab title="Email" icon="mail">
+        Enter your email and create a strong password. Verify via the confirmation link sent to your inbox.
+      </Tab>
+      <Tab title="OAuth" icon="key">
+        Connect with Google or GitHub for instant access. Grant permissions to your Brien Austin Clayton account.
+      </Tab>
+    </Tabs>
+
+    <Callout kind="tip">
+      Enable two-factor authentication (2FA) immediately after login for security.
+    </Callout>
+  </Step>
+
+  <Step title="Set Up Your Documentation Space" icon="home">
+    From the dashboard, select **Create Space**.
+
+    Configure basics:
+
+    | Setting       | Recommended Value          |
+    |---------------|----------------------------|
+    | Space Name    | Your Project Name          |
+    | Brand Color   | `#3B82F6`                  |
+    | Default Theme | Light or Dark              |
+
+    Save and access your new space at `https://docs.brienaustinclayton.com/your-space`.
+
+    <CodeGroup tabs="CLI,API">
+      ```bash
+      brien-docs space create --name "My Project" --color "#3B82F6"
+      ```
+      ```javascript
+      await brienDocs.spaces.create({
+        name: 'My Project',
+        brandColor: '#3B82F6'
+      });
+      ```
+    </CodeGroup>
+  </Step>
+
+  <Step title="Create Your First Project" icon="folder-plus">
+    In your space, click **New Project**.
+
+    Add an initial page with this starter MDX:
+
+    <CodeGroup tabs="Home,API">
+      ```mdx
+      ---
+      title: Welcome
+      description: Your project home.
+      ---
+
+      ## Hello World
+
+      Start documenting here.
+      ```
+      ```json
+      {
+        "project": "my-first-project",
+        "pages": ["home.mdx"]
+      }
+      ```
+    </CodeGroup>
+
+    Publish to generate your live docs site.
+  </Step>
+
+  <Step title="Basic Navigation" icon="menu">
+    Explore key areas:
+
+    - **Sidebar**: Manage spaces, projects, and pages.
+    - **Editor**: Write MDX with live preview.
+    - **Preview**: View published docs.
+    - **Settings**: Customize themes and integrations.
+
+    Use the search bar to find content quickly.
+  </Step>
+</Steps>
+
+## Next Steps
+
+<ExpandableGroup>
+  <Expandable title="Customize Your Brand" default-open="true">
+    Update your space settings to match `#3B82F6`. Add a logo and favicon for a professional look.
+
+    Test integrations like GitHub sync for version control.
+  </Expandable>
+  <Expandable title="Invite Collaborators">
+    Share your space via email invites. Set roles: Admin, Editor, Viewer.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  Congratulations! Your documentation space is live. Explore advanced features like custom domains and analytics next.
+</Callout>

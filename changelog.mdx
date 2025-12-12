@@ -1,0 +1,134 @@
+---
+title: Changelog
+description: A record of updates, new features, and improvements to the Brien Austin Clayton Documentation platform.
+---
+
+## Latest Updates
+
+Stay informed about enhancements to the Brien Austin Clayton Documentation platform. You access the most recent changes here, including new features that streamline your documentation workflow and bug fixes that improve reliability.
+
+<Callout kind="success">
+  The latest release v1.2.0 introduces real-time collaboration and performance boosts. Upgrade now to experience these improvements.
+</Callout>
+
+## Quick Navigation
+
+<Columns cols={3}>
+  <Card title="Latest Release" icon="zap" href="#v1-2-0">
+    v1.2.0 - October 2024
+  </Card>
+  <Card title="Previous Releases" icon="history" href="#version-history">
+    Full version history
+  </Card>
+  <Card title="Upcoming" icon="rocket" href="#upcoming">
+    What's next
+  </Card>
+</Columns>
+
+<Update label="2024-11-05" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams to edit documentation simultaneously.
+- Introduced customizable themes with your brand color `#3B82F6`.
+- New search indexing for faster navigation across large docs sites.
+
+## Improvements
+
+- Enhanced MDX rendering speed by 40% for complex pages.
+- Better mobile responsiveness with adaptive layouts.
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks.
+- Resolved frontmatter validation issues with special characters.
+
+</Update>
+
+<Update label="2024-10-15" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated Mermaid diagram support via code blocks.
+- Added JSX component auto-completion in the editor.
+
+## Improvements
+
+- Optimized image loading with lazy attributes.
+
+## Bug Fixes
+
+- Corrected escaping for `{` and `}` in prose text.
+- Fixed heading hierarchy enforcement starting from H2.
+
+</Update>
+
+<Update label="2024-09-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Core MDX documentation engine with component support.
+- YAML frontmatter validation and auto-generation.
+
+## Breaking Changes
+
+- Removed H1 support; all pages now start with H2 headings.
+
+## Bug Fixes
+
+- Initial stability fixes for component rendering.
+
+</Update>
+
+## Version History
+
+| Version | Date       | Key Changes                  | Tags              |
+|---------|------------|------------------------------|-------------------|
+| v1.2.0  | 2024-11-05 | Real-time collab, themes     | feature, improvement |
+| v1.1.0  | 2024-10-15 | Mermaid, JSX editor          | feature, bugfix   |
+| v1.0.0  | 2024-09-10 | Core engine, frontmatter     | breaking, feature |
+
+## Upcoming Features
+
+<Expandable title="Planned Enhancements" default-open="false">
+
+You can expect these additions in future releases:
+
+- AI-assisted content generation for MDX pages.
+- Advanced analytics for documentation usage.
+- Native support for Video and Iframe components with better accessibility.
+
+Provide feedback via GitHub issues to influence priorities.
+
+</Expandable>
+
+## Stay Updated
+
+Follow these steps to keep your documentation platform current:
+
+<Steps>
+  <Step title="Check Releases" icon="git-branch">
+    Visit the [GitHub releases page](https://github.com/brienaustinclayton/docs/releases) regularly.
+  </Step>
+  <Step title="Upgrade" icon="upload">
+    <Tabs>
+      <Tab title="npm" icon="package">
+        ```bash
+        npm update brien-austin-clayton-docs
+        ```
+      </Tab>
+      <Tab title="Docker" icon="docker">
+        ```bash
+        docker pull brienaustinclayton/docs:latest
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Subscribe" icon="bell">
+    Watch the repository or join the newsletter for notifications.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use `{DOCS_VERSION}` environment variable to pin specific releases in your deployment.
+</Callout>
